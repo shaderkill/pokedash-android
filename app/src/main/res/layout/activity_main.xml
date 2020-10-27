@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/pokeball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pokeball"
+        app:tint="#90000000" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pokedash"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.152" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.431">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/user_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:autofillHints=""
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="@string/ingrese_su_usuario"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/pwd_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:autofillHints=""
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="@string/ingrese_su_contrase_a"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorPrimary"
+                android:onClick="onClick"
+                android:text="@string/iniciar_sesi_n"
+                android:textColor="@android:color/white"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorPrimary"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:progressTint="@color/colorPrimary"
+            android:visibility="invisible" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

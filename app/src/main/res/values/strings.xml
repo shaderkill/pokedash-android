@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Poekedex App</string>
+    <string name="pokeball">Pokeball</string>
+    <string name="ingrese_su_usuario">Ingrese su usuario</string>
+    <string name="ingrese_su_contrase_a">Ingrese su contraseña</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
+    <string name="ultimo_lanzamiento_pok_mon_espada_y_escudo">Ultimo lanzamiento: Pokémon Espada y Escudo</string>
+    <string name="ubicaciones">Mapa</string>
+    <string name="pokedex">Pokedex</string>
+    <string name="movimientos">Movimientos</string>
+    <string name="habilidades">Habilidades</string>
+    <string name="informaci_n">Información</string>
+    <string name="nombre_pok_mon">Nombre pokémon</string>
+    <string name="tipo">Tipo</string>
+    <string name="fuerte_contra">Fuerte contra</string>
+    <string name="debil_contra">Debil contra</string>
+    <string name="elige_un_pok_mon">Elige un Pokémon</string>
+    <string name="pok_mons_favoritos">Favoritos</string>
+    <string name="pok_mons_vistos">Vistos recientemente</string>
+    <string name="trailer_pok_mon_espada_y_escudo">Trailer: Pokémon Espada y Escudo</string>
+</resources>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MenuActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/primary_square"
+                android:backgroundTint="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/water_mark"
+                    android:layout_width="61dp"
+                    android:layout_height="60dp"
+                    android:layout_span="1"
+                    android:contentDescription="water_mark"
+                    android:padding="15dp"
+                    android:textAlignment="viewStart"
+                    app:srcCompat="@drawable/pokeball"
+                    app:tint="#68FFFFFF" />
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:backgroundTint="#BFBFBF"
+                    android:padding="5dp"
+                    android:stretchColumns="0,1">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/welcome_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:layout_span="2"
+                            android:text="¡Bienvenido usuario a PokeDash!"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp">
+
+                        <Button
+                            android:id="@+id/pokedex_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#2DDAB1"
+                            android:drawableEnd="@drawable/pokemon_icon"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="#70FFFFFF"
+                            android:maxWidth="88dp"
+                            android:onClick="onClick"
+                            android:padding="5dp"
+                            android:text="@string/pokedex"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="normal"
+                            app:cornerRadius="10dp" />
+
+                        <Button
+                            android:id="@+id/location_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#FFCE4B"
+                            android:drawableEnd="@drawable/pokemon_icon"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="#70FFFFFF"
+                            android:maxWidth="88dp"
+                            android:onClick="onClick"
+                            android:padding="10dp"
+                            android:text="@string/ubicaciones"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="normal"
+                            app:cornerRadius="10dp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp">
+
+                        <Button
+                            android:id="@+id/moves_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#58ABF6"
+                            android:drawableEnd="@drawable/pokemon_icon"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="#70FFFFFF"
+                            android:onClick="onClick"
+                            android:padding="10dp"
+                            android:text="@string/movimientos"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="normal"
+                            android:visibility="gone"
+                            app:cornerRadius="10dp" />
+
+                        <Button
+                            android:id="@+id/ability_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F7786B"
+                            android:drawableEnd="@drawable/pokemon_icon"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="#70FFFFFF"
+                            android:onClick="onClick"
+                            android:padding="10dp"
+                            android:text="@string/habilidades"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="normal"
+                            android:visibility="gone"
+                            app:cornerRadius="10dp" />
+
+                    </TableRow>
+
+                </TableLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_layout1"
+                android:layout_width="420dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/recientes_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/pok_mons_vistos"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:paddingEnd="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/list_pokemons_viewed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="true"
+                            android:divider="@drawable/empty_divider"
+                            android:dividerPadding="10dp"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_layout2"
+                android:layout_width="420dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/fav_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/pok_mons_favoritos"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingEnd="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/list_pokemons_fav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="true"
+                            android:divider="@drawable/empty_divider"
+                            android:dividerPadding="10dp"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/noticias_text3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Noticias recientes"
+                        android:textSize="24sp"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/list_noticias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="true"
+                        android:divider="@drawable/empty_divider"
+                        android:dividerPadding="10dp"
+                        android:orientation="horizontal"
+                        android:showDividers="middle">
+
+                        <com.google.android.material.card.MaterialCardView
+                            app:cardBackgroundColor="@color/colorPrimary"
+                            app:cardCornerRadius="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:id="@+id/titleNotice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="@string/trailer_pok_mon_espada_y_escudo"
+                                    android:textSize="16sp"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textNotice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@android:color/white"
+                                    android:text="Nintendo y Game Freak han dado a conocer recientemente el tráiler de lanzamiento de Pokémon Espada y Escudo, los cuales llegarán en exclusiva para Nintendo Switch."
+                                    android:textSize="14sp" />
+
+                                <VideoView
+                                    android:id="@+id/vw"
+                                    android:layout_width="350dp"
+                                    android:layout_height="200dp" />
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
